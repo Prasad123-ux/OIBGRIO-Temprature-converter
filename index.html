@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <b id="nav2">Temperature converter </b>
+</nav>
+      <div class="container"> 
+    <select id="pm">
+        <option value="celsius">celsius</option>
+        <option value="kelvin">kelvin</option>
+        <option value="farenhit">farenhit</option>
+    </select>
+    <input type="number" id="farenhitC"/><br>
+    <input  class="class" type="" id="celsiusC"/>
+    <input  class="class" type="" id="kelvinC"/><br>
+    <div id="metkar">Convert</div>
+    </div>
+    <!-- <h1 class="head2">some information about wheather</h1> -->
+    <!-- <div class="head3"> -->
+        <!-- <h1 class="head2">some information about wheather</h1> -->
+    <div class="info">
+       <p> Temperature is a physical quantity that expresses quantitatively the perceptions of hotness and coldness. Temperature is measured with a thermometer.</p>
+
+      <p>  Thermometers are calibrated in various temperature scales that historically have relied on various reference points and thermometric substances for definition. The most common scales are the Celsius scale with the unit symbol °C (formerly called centigrade), the Fahrenheit scale (°F), and the Kelvin scale (K), the latter being used predominantly for scientific purposes. The kelvin is one of the seven base units in the International System of Units (SI).</p>
+        
+      <p>  Absolute zero, i.e., zero kelvin or −273.15 °C, is the lowest point in the thermodynamic temperature scale. Experimentally, it can be approached very closely but not actually reached, as recognized in the third law of thermodynamics. It would be impossible to extract energy as heat from a body at that temperature.</p>
+        
+     <p><p>   Temperature is important in all fields of natural science, including physics, chemistry, Earth science, astronomy, medicine, biology, ecology, material science, metallurgy, mechanical engineering and geography as well as most aspects of daily life.</p>
+        <i>
+ <officiis class="lo"></officiis>
+        </i>
+    </div>
+    <!-- <input type="number" id="celsiusC"><input type="number" id="kelvinC"> -->
+
+    <script>
+        // input.value="";
+        
+// input.value="";
+if(document.getElementById("pm").value ==="celsius"){
+    var btn = document.getElementById("metkar");
+    btn.onclick = Prasad1;
+} else if(document.getElementById("pm").value == "kelvin"){
+    var mtn= document.getElementById("metkar");
+    mtn.onclick = Prasad2;
+} else {
+    var nyn = document.getElementById("pm");
+    nyn.onclick = Prasad;
+}
+         
+
+if (document.getElementById("pm").value === "celsius") {
+    var btn = document.getElementById("metkar");
+    btn.onclick = Prasad1;
+} else if (document.getElementById("pm").value === "kelvin") {
+    var btn = document.getElementById("metkar");
+    btn.onclick = Prasad2;
+} else {
+    var btn = document.getElementById("pm");
+    btn.onclick = Prasad;
+}
+
+function Prasad() {
+    let a = document.getElementById("farenhitC").value;
+    let b = (a - 32) * (5 / 9);
+    let c = b + 273.15;
+    let convertF = a.toFixed(1);
+    let convertK = b.toFixed(1);
+
+    document.getElementById("celsiusC").value = b.toFixed(1)+;
+    document.getElementById("kelvinC").value = c.toFixed(1);
+}
+
+function Prasad1() {
+    let x = document.getElementById("farenhitC").value;
+    let a = (x - 32) * (5 / 9);
+    let b = a + 273.15;
+    let convertF = a.toFixed(1);
+    let convertK = b.toFixed(1);
+    document.getElementById("celsiusC").value = convertF;
+    document.getElementById("kelvinC").value = convertK;
+}
+
+function Prasad2() {
+    let x = document.getElementById("farenhitC").value;
+    let a = x - 273.15;
+    let b = 1.8 * a + 32;
+    let convertK = b.toFixed(1);
+    let convertC = a.toFixed(1);
+
+    document.getElementById("celsiusC").value = convertC;
+    document.getElementById("kelvinC").value = convertK;
+}
+
+</script>
+
+
+    </center>
+</body>
+<style type="text/css">
+    body{
+        background-image: url("wheathr.jpeg");
+        background-attachment: fixed ;
+    }
+.class{
+    margin-top: 20px;
+}
+.container{
+    margin-top: 150px;
+    margin-right: 250px;
+}
+input{
+    padding: 5px;
+    background-color: transparent;
+    font-size: 15px;
+}
+#pm{
+    padding:px;
+    background-color: transparent;
+    font-size: 20px;
+}
+#pm:hover{
+    background-color:aliceblue;
+}
+#metkar{
+    background-color: transparent;
+    margin-top: 20px;
+    width: 150px;
+    height: 25px;
+    border:1px solid black;
+    border-radius: 50px;
+    font-size: 20px;
+}
+#metkar:hover{
+    background-color: aliceblue;
+}
+#kelvinC{
+    margin-left: 10px;
+}
+button:hover{
+cursor: pointer;
+}
+input:hover{
+    background-color: aliceblue;
+}
+.headline{
+    display: flex;
+   
+}
+
+b{
+    font-size: 40px;
+    color:coral;
+}
+.info{
+    color:black;;
+    font-size: 20px;
+    margin-right: 400px;
+    margin-top: 100px;
+    background-color: transparent;
+    width: 750px;
+    height: 150px;
+    overflow: scroll;
+    border: 1px splid black;
+    word-break: break-word;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    font-weight: 30px;;
+    font-family:"Geneva";
+    text-decoration: none;
+    /* display: none; */
+    
+
+}
+.info::-webkit-scrollbar{
+    display: none;
+
+}
+.head2{
+    margin-top: px;
+    margin-right: 300px;
+}
+#nav1{
+    background-color: aliceblue;
+    font-size: 18px;
+    padding-left: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    border-radius: 50px;
+}
+#nav2{
+    /* margin-left: 50px; */
+    margin-right: 200px;
+    font-size: 40px;
+}
+.accordion{
+    margin-top: 10px;
+    margin-left: 500px;
+    width: 150px;
+    height: 20px;
+    border: 1px solid red;
+    overflow: hidden;
+    padding: 5px;
+    /* padding-left: 10px; */
+}
+
+
+</style>
+</html>
